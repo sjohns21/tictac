@@ -69,8 +69,13 @@ $(document).ready(function(){
 		function comp(){
 			var compIndex=Math.round(Math.random()*8);
 			// var target=td:eq(compIndex)
+			if ($("td:eq("+compIndex+")").text()){
+				comp()
+			}
+			else{
 			$("td:eq("+compIndex+")").text(compAgent)
 			console.log(compIndex);
+		}
  			// for(i=1;i<10;i++){
 			// 	// if(true){
 			// 	// 	console.log('bb');
