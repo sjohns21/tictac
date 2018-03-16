@@ -1,0 +1,8 @@
+.game {
+	display:none;
+}
+table td{
+	border: 5px solid black;
+	width: 2em;
+	height: 2em;
+}
