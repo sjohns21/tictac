@@ -20,17 +20,14 @@ $(document).ready(function(){
 		var checking;
 		$('td').click(function click(){
 			if($(this).text()){}
-			// if(userTurn==true){
 			else {
 
 			$(this).text(userAgent);
 			userTurn = !userTurn;
 			checking=userAgent;
 			check();
-			//}
-			// else{
+
 			comp();
-			// $(this).text(compAgent)
 			userTurn = !userTurn;
 			checking=compAgent;
 			check();
@@ -78,22 +75,11 @@ $(document).ready(function(){
 			}
 			else{
 			$("td:eq("+compIndex+")").text(compAgent)
-			console.log(compIndex);
 		}
- 			// for(i=1;i<10;i++){
-			// 	// if(true){
-			// 	// 	console.log('bb');
-			// 	// }
-			// 	if($('td:eq(i)').text()=="X"){
-			// 		console.log('titi');
-			// 	}
- 			// }
-			// console.log($('td:eq(0)').text())
 		}
 
 		})
 
 
 	}
-	// $('.game').hide();
 } )
