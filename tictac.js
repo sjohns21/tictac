@@ -19,7 +19,10 @@ $(document).ready(function(){
 		var userTurn = true;
 		var checking;
 		$('td').click(function click(){
+			if($(this).text()){}
 			// if(userTurn==true){
+			else {
+
 			$(this).text(userAgent);
 			userTurn = !userTurn;
 			checking=userAgent;
@@ -66,6 +69,7 @@ $(document).ready(function(){
 					console.log('comp win')
 				}
 			}}
+		}
 		function comp(){
 			var compIndex=Math.round(Math.random()*8);
 			// var target=td:eq(compIndex)
