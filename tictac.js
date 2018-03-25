@@ -14,26 +14,32 @@ $(document).ready(function(){
 	})
 
 	function game(){
-		$('.select').toggle();
-		$('.game').toggle();
+		$('#select').toggle();
+		$('#game').toggle();
 		var userTurn = true;
 		var checking;
+		var count = 0;
 		$('td').click(function click(){
-			if($(this).text()){}
-			else {
+			if($(this).text()){} //if cell is true (has value already), do nothing on click
+			else { //otherwise, fill cell
 
 			$(this).text(userAgent);
+			count++;
 			userTurn = !userTurn;
 			checking=userAgent;
 			check();
-
+			if (count==9){
+				return;
+			}
 			comp();
+			count++;
 			userTurn = !userTurn;
 			checking=compAgent;
 			check();
 
 			function check(){
-				if(
+
+			if(
 				$('#1').text()==checking&&
 				$('#2').text()==checking&&
 				$('#3').text()==checking||
@@ -65,7 +71,13 @@ $(document).ready(function(){
 				else{
 					console.log('comp win')
 				}
-			}}
+			}
+			else if (count==9) {
+				console.log('gridlock')
+				return;
+			}
+
+		}
 		}
 		function comp(){
 			var compIndex=Math.round(Math.random()*8);

@@ -1,0 +1,287 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "tictac.html",
+			"settings":
+			{
+				"buffer_size": 849,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tictac.css",
+			"settings":
+			{
+				"buffer_size": 90,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "$(document).ready(function(){\n\tvar userAgent, compAgent;\n\n\t$('#selectX').click(function(){\n\tuserAgent = 'X';\n\tcompAgent = 'O';\n\tgame();\n\t})\n\n\t$('#selectO').click(function(){\n\tuserAgent = 'O';\n\tcompAgent = 'X';\n\tgame();\n\t})\n\n\tfunction game(){\n\t\t$('#select').toggle();\n\t\t$('#game').toggle();\n\t\tvar userTurn = true;\n\t\tvar checking;\n\t\t$('td').click(function click(){\n\t\t\tif($(this).text()){} //if cell is true (has value already), do nothing on click\n\t\t\telse { //otherwise, fill cell\n\n\t\t\t$(this).text(userAgent);\n\t\t\tuserTurn = !userTurn;\n\t\t\tchecking=userAgent;\n\t\t\tcheck();\n\n\t\t\tcomp();\n\t\t\tuserTurn = !userTurn;\n\t\t\tchecking=compAgent;\n\t\t\tcheck();\n\n\t\t\tfunction check(){\n\n\t\t\t\t if(\n\t\t\t\t$('#1').text()==checking&&\n\t\t\t\t$('#2').text()==checking&&\n\t\t\t\t$('#3').text()==checking||\n\t\t\t\t$('#1').text()==checking&&\n\t\t\t\t$('#4').text()==checking&&\n\t\t\t\t$('#7').text()==checking||\n\t\t\t\t$('#1').text()==checking&&\n\t\t\t\t$('#5').text()==checking&&\n\t\t\t\t$('#9').text()==checking||\n\t\t\t\t$('#7').text()==checking&&\n\t\t\t\t$('#8').text()==checking&&\n\t\t\t\t$('#9').text()==checking||\n\t\t\t\t$('#3').text()==checking&&\n\t\t\t\t$('#6').text()==checking&&\n\t\t\t\t$('#9').text()==checking||\n\t\t\t\t$('#2').text()==checking&&\n\t\t\t\t$('#5').text()==checking&&\n\t\t\t\t$('#8').text()==checking||\n\t\t\t\t$('#4').text()==checking&&\n\t\t\t\t$('#5').text()==checking&&\n\t\t\t\t$('#6').text()==checking||\n\t\t\t\t$('#3').text()==checking&&\n\t\t\t\t$('#5').text()==checking&&\n\t\t\t\t$('#7').text()==checking\n\t\t\t){\n\t\t\t\tif(!userTurn){\n\t\t\t\tconsole.log(\"user win\");\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\tconsole.log('comp win')\n\t\t\t\t}\n\t\t\t}}\n\t\t}\n\t\tfunction comp(){\n\t\t\tvar compIndex=Math.round(Math.random()*8);\n\t\t\t// var target=td:eq(compIndex)\n\t\t\tif ($(\"td:eq(\"+compIndex+\")\").text()){\n\t\t\t\tcomp()\n\t\t\t}\n\t\t\telse{\n\t\t\t$(\"td:eq(\"+compIndex+\")\").text(compAgent)\n\t\t}\n\t\t}\n\n\t\t})\n\n\n\t}\n} )\n",
+			"file": "tictac.js",
+			"file_size": 1681,
+			"file_write_time": 131664756942264290,
+			"settings":
+			{
+				"buffer_size": 1763,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 299.0,
+		"last_filter": "inde",
+		"selected_items":
+		[
+			[
+				"inde",
+				"Indexing Status"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".select",
+			".game"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "tictac.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tictac.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 90,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tictac.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1012,
+								1012
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 215.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 73.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
